@@ -32,8 +32,8 @@ Antes de comenzar, asegúrate de tener instalado:
 1. Clona este repositorio:
 
 ```bash
-git clone https://github.com/--NOMBRE/Beauty_Cosmetics_Laravel.git
-cd Beauty_Cosmetics_Laravel
+git clone https://github.com/Nataliacasta/paris.git
+cd paris
 ```
 
 2. Instala las dependencias de PHP:
