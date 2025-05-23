@@ -1,4 +1,4 @@
-# 💄 Beauty Cosmetics - Proyecto Laravel
+# 💄 Paris Sala de Belleza - Proyecto Laravel
 
 Este proyecto es una aplicación web desarrollada con **Laravel 8** que permite la gestión de servicios cosméticos, personal, citas y clientes. Incluye autenticación de usuarios, roles diferenciados y panel administrativo.
 
