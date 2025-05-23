@@ -43,28 +43,28 @@
 <!-- Add New Service Form -->
 @if(Auth::check() && Auth::user()->isAdmin())
 <div class="my-10 container mx-auto">
-    <h2 class="text-3xl font-semibold mb-4 text-center">Add A New Service</h2>
+    <h2 class="text-3xl font-semibold mb-4 text-center">Añadir un nuevo servicio</h2>
     <div class="custom-form-width mx-auto mb-20"> <!-- Use custom CSS class for wider form -->
         <form method="POST" action="{{ route('services.store') }}" enctype="multipart/form-data" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             @csrf
             <div class="mb-4">
-                <label for="service_name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
+                <label for="service_name" class="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
                 <input type="text" id="service_name" name="service_name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
             </div>
             <div class="mb-4">
-                <label for="service_description" class="block text-gray-700 text-sm font-bold mb-2">Description:</label>
+                <label for="service_description" class="block text-gray-700 text-sm font-bold mb-2">Descripcion:</label>
                 <textarea id="service_description" name="service_description" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required></textarea>
             </div>
             <div class="mb-4">
-                <label for="service_price" class="block text-gray-700 text-sm font-bold mb-2">Price:</label>
+                <label for="service_price" class="block text-gray-700 text-sm font-bold mb-2">Precio:</label>
                 <input type="number" step="0.01" id="service_price" name="service_price" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
             </div>
             <div class="mb-4">
-                <label for="image" class="block text-gray-700 text-sm font-bold mb-2">Image:</label>
+                <label for="image" class="block text-gray-700 text-sm font-bold mb-2">Imagen:</label>
                 <input type="file" id="image" name="image" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
             </div>
             <div class="flex items-center justify-center">
-                <button type="submit" class="btn-pink">Add Service</button>
+                <button type="submit" class="btn-pink">Agregar servicio</button>
             </div>
         </form>
     </div>

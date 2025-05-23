@@ -1,11 +1,11 @@
 <footer>
   <div class="footer-container">
       <div class="footer-section">
-          <h3>Stay in the Know</h3>
+          <h3>Mantengace Informado</h3>
           <form>
               <input type="email" placeholder="Email Address" required>
-              <button type="submit">Submit</button>
-              <p>By signing and clicking Submit, you affirm you have read and agree to the Privacy Policy and Terms of Use, and want to receive news.</p>
+              <button type="submit">Enviar</button>
+              <p>Al firmar y hacer clic en Enviar, confirma que ha leido y acepta la politica de privacidad y las condiciones de uso y que desea recibir noticias.</p>
           </form>
       </div>
       <div class="footer-section">
@@ -20,7 +20,7 @@
           </ul>
       </div>
       <div class="footer-section">
-          <h3>Developers</h3>
+          <h3>Desarrolladores</h3>
           <ul>
               <li><a href="#">Natalia Castañeda</a></li>
               <li><a href="#">Brigith Simbaqueba</a></li>

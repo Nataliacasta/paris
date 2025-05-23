@@ -6,9 +6,9 @@
 <div class="relative bg-cover bg-center h-96 mb-10" style="background-image: url('{{ asset('css/images/staff.png') }}'); background-size: cover;">
     <div class="absolute inset-0 bg-black opacity-50"></div>
     <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
-        <h1 class="text-5xl font-bold">Artists + Staff</h1>
+        <h1 class="text-5xl font-bold">Artistas + personal</h1>
         <nav class="text-sm mt-2">
-            <a href="/" class="hover:text-gray-300">Home</a> » <span>Our Team</span>
+            <a href="/" class="hover:text-gray-300">inicio</a> » <span>Nuestro personal</span>
         </nav>
     </div>
 </div>
@@ -43,28 +43,28 @@
 <!-- Add New Staff Section -->
 @if(Auth::check() && Auth::user()->isAdmin())
 <div class="my-10 container mx-auto">
-    <h2 class="text-3xl font-semibold mb-4 text-center">Add New Staff</h2>
+    <h2 class="text-3xl font-semibold mb-4 text-center">Añadir Nuevo Personal</h2>
     <div class="custom-form-width mx-auto mb-20"> <!-- Use custom CSS class for wider form -->
         <form method="POST" action="{{ route('staff.store') }}" enctype="multipart/form-data" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             @csrf
             <div class="mb-4">
-                <label for="artist_name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
+                <label for="artist_name" class="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
                 <input type="text" id="artist_name" name="artist_name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
             </div>
             <div class="mb-4">
-                <label for="position" class="block text-gray-700 text-sm font-bold mb-2">Position:</label>
+                <label for="position" class="block text-gray-700 text-sm font-bold mb-2">posicion:</label>
                 <input type="text" id="position" name="position" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
             </div>
             <div class="mb-4">
-                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Corre Electronico:</label>
                 <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
             </div>
             <div class="mb-4">
-                <label for="image" class="block text-gray-700 text-sm font-bold mb-2">Image:</label>
+                <label for="image" class="block text-gray-700 text-sm font-bold mb-2">Imagen:</label>
                 <input type="file" id="image" name="image" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
             </div>
             <div class="flex items-center justify-center">
-                <button type="submit" class="btn-pink">Add Staff</button>
+                <button type="submit" class="btn-pink">Agregar Personal</button>
             </div>
         </form>
     </div>

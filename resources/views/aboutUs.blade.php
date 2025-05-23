@@ -10,12 +10,12 @@
     <div class="container mx-auto">
         <div class="flex flex-wrap items-center">
             <div class="w-full md:w-1/2">
-                <img src="https://www.byrdie.com/thmb/0nSkcCCvoPE8mUzKJ-7RJH-sf64=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/OliveJune-23746c4d1e7949ffbae06bf09ed241bf.jpg" alt="OliveJune Image" class="w-full md:w-3/4 lg:w-2/3 h-auto rounded-lg shadow-lg">
+                <img src="{{ asset('images/salondebelleza.jpeg') }}" alt="Nuestro Salon" class="w-full md:w-3/4 lg:w-2/3 h-auto rounded-lg shadow-lg">
             </div>
             <div class="w-full md:w-1/2 px-4 lg:px-8 py-6 lg:py-0">
                 <h2 id="about-heading" class="text-3xl lg:text-4xl font-bold mb-4">¿Quienes Somos?</h2>
                 <p class="text-base lg:text-lg text-gray-700 leading-relaxed">
-                    Somos una empresa dedicada al servicio de la Belleza, con una trayectoria de 13 años de experiencia, donde nos inspiramos Paris capital de la belleza y la moda, ademas referente de las mejores marcas del mercado como loreal marca que  manejamos en nuestro servicio </p>
+                    Somos una empresa dedicada al servicio de la Belleza, con una trayectoria de 13 años de experiencia, donde nos inspiramos en  Paris capital de la belleza y la moda, ademas referente de las mejores marcas del mercado de la belleza  como loreal marca que  manejamos en nuestro servicio </p>
             </div>
         </div>
     </div>
@@ -23,21 +23,21 @@
 <section id="services" class="bg-gray-100 py-12">
     <div class="container mx-auto">
         <div class="flex flex-col items-center"> <!-- Changed container to flex column -->
-            <h2 id="about-heading" class="text-3xl lg:text-4xl font-bold mb-4">Our Nail Art</h2>
+            <h2 id="about-heading" class="text-3xl lg:text-4xl font-bold mb-4">Nuestro Arte de Uñas</h2>
             <div class="flex flex-wrap justify-center">
                 <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 px-4 mb-8">
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://i.pinimg.com/originals/1e/62/bc/1e62bcaa0f454a3eef3bd6f117f2fee8.jpg" alt="Nail Art 1" class="w-full h-auto rounded-lg shadow-lg">
+                        <img src="{{ asset('images/uñaspresson.jpeg') }}" alt="Nail Art 1" class="w-full h-auto rounded-lg shadow-lg">
                     </div>
                 </div>
                 <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 px-4 mb-8">
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://i.pinimg.com/originals/27/30/f9/2730f99f7adfa0c1969015e2146534bb.jpg" alt="Nail Art 2" class="w-full h-auto rounded-lg shadow-lg">
+                        <img src="{{ asset('images/uñasengel.jpeg') }}" alt="Nail Art 2" class="w-full h-auto rounded-lg shadow-lg">
                     </div>
                 </div>
                 <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 px-4 mb-8">
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://i.pinimg.com/originals/95/02/29/9502294fa637f28eb8a72206fbc3efa7.jpg" alt="Nail Art 3" class="w-full h-auto rounded-lg shadow-lg">
+                        <img src="{{ asset('images/uñaspoligel.jpeg') }}" alt="Nail Art 3" class="w-full h-auto rounded-lg shadow-lg">
                     </div>
                 </div>
             </div>
@@ -48,24 +48,24 @@
 <section id="testimonials" class="py-12">
     <div class="container mx-auto">
         <div class="flex flex-col items-center"> <!-- Changed container to flex column -->
-            <h2 id="about-heading" class="text-3xl lg:text-4xl font-bold mb-4">What People Are Saying</h2>
+            <h2 id="about-heading" class="text-3xl lg:text-4xl font-bold mb-4">lo que dice la Gente</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div class="p-6">
-                    <p class="text-lg text-gray-700">"I love Glamour Nails! The staff is friendly and professional, and my nails always look amazing after a visit."</p>
-                    <p class="text-sm text-gray-500">- Jessica S.</p>
+                    <p class="text-lg text-gray-700">"Me encanta sala de belleza Paris! El personal es amable y muy profesional y mis uñas simpre lucen increible."</p>
+                    <p class="text-sm text-gray-500">- Alejandra S.</p>
                 </div>
             </div>
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div class="p-6">
-                    <p class="text-lg text-gray-700">"The nail technicians here are incredibly talented. They can bring any nail art idea to life!"</p>
-                    <p class="text-sm text-gray-500">- Emily P.</p>
+                    <p class="text-lg text-gray-700">"Los profesionales de uñas aqui son increiblemente talentosos, pueden darle vida a cualquier idea de arte!"</p>
+                    <p class="text-sm text-gray-500">- Dayana P.</p>
                 </div>
             </div>
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div class="p-6">
-                    <p class="text-lg text-gray-700">"I've been a customer for years, and I wouldn't trust anyone else with my nails. Highly recommend!"</p>
-                    <p class="text-sm text-gray-500">- Michael R.</p>
+                    <p class="text-lg text-gray-700">"he sido cliente durante años y no confio mis uñas en nadie mas, lo recomiendo encarecidamente.!"</p>
+                    <p class="text-sm text-gray-500">- Natalia R.</p>
                 </div>
             </div>
         </div>
@@ -76,8 +76,8 @@
         <div class="row justify-content-center">
             <div class="col-lg-10 col-xl-8">
                 <div class="section-title title-01 mb-70">
-                    <span class="section-id">News & Events</span>
-                    <h2 class="h2-lg">Latest News & Events</h2>
+                    <span class="section-id">Noticias y Eventos</span>
+                    <h2 class="h2-lg">Ultimas Noticias y Eventos</h2>
                 </div>
             </div>
         </div>
@@ -87,24 +87,24 @@
             <div class="col mb-4">
                 <div class="blog-1-post">
                     <div class="blog-post-img">
-                        <img class="img-fluid" src="https://i.pinimg.com/564x/09/ea/d0/09ead08f5ba10dcf1ea21a30115b5d81.jpg" alt="article1" />
+                        <img class="img-fluid" src="{{ asset('images/promotintes.jpeg') }}" alt="article1" />
                     </div>
                     <div class="blog-post-txt">
-                        <h5 class="h5-md">New Nail Art Workshop!</h5>
-                        <p class="post-tag">Event, Announcement | May 13, 2024</p>
-                        <p class="p-lg">Join us for our upcoming nail art workshop!</p>
+                        <h5 class="h5-md">Nuevo taller de arte de uñas y makeup!</h5>
+                        <p class="post-tag">Evento, Anuncios| junio 18, 2025</p>
+                        <p class="p-lg">Unete a nosotros en nuestro proximo taller de uñas y makeup!</p>
                     </div>
                 </div>
             </div>
             <div class="col mb-4">
                 <div class="blog-1-post">
                     <div class="blog-post-img">
-                        <img class="img-fluid" src="https://i.pinimg.com/originals/00/f2/20/00f220ded057364461d61437a77185be.jpg" alt="article2" />
+                        <img class="img-fluid" src="{{ asset('images/promouñas.jpeg') }}" alt="article2" />
                     </div>
                     <div class="blog-post-txt">
-                        <h5 class="h5-md">Limited Time Promotion!</h5>
-                        <p class="post-tag">News, Promotion | May 10, 2024</p>
-                        <p class="p-lg">Enjoy 20% off all manicures!</p>
+                        <h5 class="h5-md">promocion por tiempo limitado de Colorimetria!</h5>
+                        <p class="post-tag">Noticias promociones | junio 25, 2025</p>
+                        <p class="p-lg">disfruta de un 20% en nuestras promociones!</p>
                     </div>
                 </div>
             </div>
