@@ -17,21 +17,21 @@
         <header id="main-header" class="header {{ in_array(Route::currentRouteName(), ['index', 'aboutUs', 'staff', 'gallery', 'appointments.index', 'services.index']) ? 'transparent' : 'solid' }}">
             <div class="container">
                 <nav id="main-navigation" class="navigation {{ in_array(Route::currentRouteName(), ['index', 'aboutUs', 'staff', 'gallery', 'appointments.index', 'services.index']) ? 'text-white' : '' }}">
-                    <a href="/" class="nav-link">Home</a>
-                    <a href="/aboutUs" class="nav-link">About</a>
-                    <a href="/services" class="nav-link">Services</a>
-                    <a href="/appointments" class="nav-link">Appointments</a>
-                    <a href="/paint" class="nav-link">Create</a>
+                    <a href="/" class="nav-link">Inicio</a>
+                    <a href="/aboutUs" class="nav-link">Acerca de nosotros</a>
+                    <a href="/services" class="nav-link">Servicios</a>
+                    <a href="/appointments" class="nav-link">Equipo</a>
+                    <a href="/paint" class="nav-link">Crear</a>
                     <a href="{{ url('/') }}" class="nav-logo">
-                        GLAMOUR TOUCH
-                        <span class="logo-subtext">Nails & Beauty</span>
+                        PARIS🗼
+                        <span class="logo-subtext">sala de belleza</span>
                     </a>
-                    <a href="/staff" class="nav-link">Staff</a>
-                    <a href="/gallery" class="nav-link">Gallery</a>
+                    <a href="/staff" class="nav-link">Personal</a>
+                    <a href="/gallery" class="nav-link">Galeria</a>
                     @guest
-                        <a class="nav-button" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a class="nav-button" href="{{ route('login') }}">{{ __('Acceso') }}</a>
                         @if (Route::has('register'))
-                            <a class="nav-button" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-button" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
                         @endif
                     @else
                         <span class="nav-user">{{ Auth::user()->name }}</span>

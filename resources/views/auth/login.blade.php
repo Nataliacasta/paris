@@ -8,14 +8,14 @@
             <section class="flex flex-col break-words bg-white sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg">
 
                 <header class="font-semibold bg-black text-white py-0 px-8 sm:py-4 sm:pt-8 sm:rounded-t-md text-2xl text-center">
-                    {{ __('Welcome back') }}
+                    {{ __('Bienvenido de Nuevo') }}
                 </header>
                 <form class="w-full px-6 pt-0 space-y-6 sm:px-10 sm:space-y-8" method="POST" action="{{ route('login') }}">
                     @csrf
 
                     <div class="flex flex-wrap">
                         <label for="email" class="block text-black text-sm font-bold mb-2 sm:mb-4">
-                            {{ __('Email Address') }}:
+                            {{ __('Correo ') }}:
                         </label>
 
                         <input id="email" type="email"
@@ -31,7 +31,7 @@
 
                     <div class="flex flex-wrap">
                         <label for="password" class="block text-black text-sm font-bold mb-2 sm:mb-4">
-                            {{ __('Password') }}:
+                            {{ __('Contraseña') }}:
                         </label>
 
                         <input id="password" type="password"
@@ -49,13 +49,13 @@
                         <label class="inline-flex items-center text-sm text-gray-700" for="remember">
                             <input type="checkbox" name="remember" id="remember" class="form-checkbox"
                                 {{ old('remember') ? 'checked' : '' }}>
-                            <span class="ml-2">{{ __('Remember Me') }}</span>
+                            <span class="ml-2">{{ __('Recuerdame') }}</span>
                         </label>
 
                         @if (Route::has('password.request'))
                         <a class="text-sm text-customPink hover:text-customPink whitespace-no-wrap no-underline hover:underline ml-auto"
                             href="{{ route('password.request') }}">
-                            {{ __('Forgot Your Password?') }}
+                            {{ __('¿Olvidaste tu contraseña?') }}
                         </a>
                         @endif
                     </div>
@@ -63,14 +63,14 @@
                     <div class="flex flex-wrap">
                         <button type="submit"
                         class="w-full select-none font-bold whitespace-no-wrap p-3 rounded-lg text-base leading-normal no-underline text-white bg-customPink hover:bg-contrastPink sm:py-4">
-                            {{ __('Login') }}
+                            {{ __('Acceso') }}
                         </button>
 
                         @if (Route::has('register'))
                         <p class="w-full text-xs text-center text-gray-700 my-6 sm:text-sm sm:my-8">
-                            {{ __("Don't have an account?") }}
+                            {{ __("¿No tienes una cuenta?") }}
                             <a class="text-customPink hover:text-customPink no-underline hover:underline" href="{{ route('register') }}">
-                                {{ __('Register') }}
+                                {{ __('Registrate') }}
                             </a>
                         </p>
                         @endif

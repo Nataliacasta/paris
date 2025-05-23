@@ -9,14 +9,10 @@
             <div class="w-1/2 p-1 md:p-2">
                 <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://i.pinimg.com/236x/3b/94/eb/3b94eb45500ddef827b40f2ee17bf2b2.jpg" />
             </div>
-            <div class="w-full p-1 md:p-2">
-                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://www.hindustantimes.com/ht-img/img/2023/02/13/original/3f40a9a29dbf219e279b223661590174_1676286305930.jpg" />
-            </div>
+        
         </div>
         <div class="flex w-1/2 flex-wrap">
-            <div class="w-full p-1 md:p-2">
-                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://www.uptowngirl.com/wp-content/uploads/2022/09/cat-nail-art-designs-04.jpg" />
-            </div>
+        
             <div class="w-1/2 p-1 md:p-2">
                 <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://i.pinimg.com/736x/29/44/12/2944122bb1fa129fd5e7ce4cda023ee2.jpg" />
             </div>
@@ -59,11 +55,7 @@
                 <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://i.pinimg.com/736x/43/87/82/4387826a7db81459057e314c02fddf97.jpg" />
             </div>
         </div>
-        <div class="flex w-1/2 flex-wrap">
-            <div class="w-full p-1 md:p-2">
-                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://www.salonsdirect.com/blog/wp-content/uploads/2022/03/envybeautyexeter.jpg" />
-            </div>
-        </div>
+        
     </div>
 </div>
 
