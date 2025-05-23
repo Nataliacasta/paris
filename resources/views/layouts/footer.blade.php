@@ -9,23 +9,22 @@
           </form>
       </div>
       <div class="footer-section">
-          <h3>Get in Touch</h3>
+          <h3>Contactanos</h3>
           <ul>
-            <li>Glamour Touch Nail Bar, Dundalk Marshes Shopping Centre</li>
-                <li>hello@GlamourTouch.com</li>
-                <li>+353 042 1234567</li>
-                <li>Mon-Fri: 10AM - 9PM</li>
-                <li>Saturday: 10AM - 7PM</li>
-                <li>Sunday: 10PM - 7PM</li>
+            <li>Sala_de_Belleza_paris calle 13 manzana C/ Barrio villa karol Garzon huila</li>
+                <li>saladebellezaparis@gmail.com</li>
+                <li>+57 3124359106</li>
+                <li>lunes-viernes: 8AM -7PM</li>
+                <li>Sabado: 9AM - 7PM</li>
+                <li>Domingo Y festivos: 8PM-12PM</li>
           </ul>
       </div>
       <div class="footer-section">
           <h3>Developers</h3>
           <ul>
-              <li><a href="#">Meghana</a></li>
-              <li><a href="#">Aoife</a></li>
-              <li><a href="#">Meghan</a></li>
-              <li><a href="https://github.com/RathnamMeghana/Beauty_Cosmetics_Laravel">Our Github</a></li>
+              <li><a href="#">Natalia Castañeda</a></li>
+              <li><a href="#">Brigith Simbaqueba</a></li>
+              <li><a href="#">Yenifer Florez</a></li>
           </ul>
       </div>
   </div>

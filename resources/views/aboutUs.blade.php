@@ -2,7 +2,7 @@
 
 @section('content')
 <section id="hero-2" class="bg-fixed hero-section division bg-hero-image2 bg-cover pt-5">
-    <p class="h2glamour">About Glamour Nails</p>
+    <p class="h2glamour">Acerca de Sala de Belleza Paris</p>
 </section>
 
 
@@ -13,9 +13,9 @@
                 <img src="https://www.byrdie.com/thmb/0nSkcCCvoPE8mUzKJ-7RJH-sf64=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/OliveJune-23746c4d1e7949ffbae06bf09ed241bf.jpg" alt="OliveJune Image" class="w-full md:w-3/4 lg:w-2/3 h-auto rounded-lg shadow-lg">
             </div>
             <div class="w-full md:w-1/2 px-4 lg:px-8 py-6 lg:py-0">
-                <h2 id="about-heading" class="text-3xl lg:text-4xl font-bold mb-4">About Us</h2>
+                <h2 id="about-heading" class="text-3xl lg:text-4xl font-bold mb-4">¿Quienes Somos?</h2>
                 <p class="text-base lg:text-lg text-gray-700 leading-relaxed">
-                    At Glamour Nail Salon, we offer an array of luxurious nail treatments tailored to pamper and rejuvenate your hands and feet. Our skilled technicians specialize in a variety of services, including manicures, pedicures, gel polish application, nail art, and more. Step into our serene salon environment, where you'll be greeted with a warm smile and exceptional service from start to finish. Whether you're looking for a classic French manicure or a trendy nail design, our team is dedicated to providing you with top-notch care and attention to detail. Sit back, relax, and indulge in the ultimate nail care experience at our Salon.</p>
+                    Somos una empresa dedicada al servicio de la Belleza, con una trayectoria de 13 años de experiencia, donde nos inspiramos Paris capital de la belleza y la moda, ademas referente de las mejores marcas del mercado como loreal marca que  manejamos en nuestro servicio </p>
             </div>
         </div>
     </div>
