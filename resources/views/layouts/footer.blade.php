@@ -3,7 +3,7 @@
       <div class="footer-section">
           <h3>Mantengace Informado</h3>
           <form>
-              <input type="email" placeholder="Email Address" required>
+              <input type="email" placeholder="Dirección de correo electrónico" required>
               <button type="submit">Enviar</button>
               <p>Al firmar y hacer clic en Enviar, confirma que ha leido y acepta la politica de privacidad y las condiciones de uso y que desea recibir noticias.</p>
           </form>

@@ -16,8 +16,8 @@
 <!-- Error and Success Messages -->
 @if ($errors->any())
     <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-4 container mx-auto" role="alert">
-        <strong class="font-bold">Whoops!</strong>
-        <span class="block sm:inline">There were some problems with your input.</span>
+        <strong class="font-bold">Ups!</strong>
+        <span class="block sm:inline">Hubo algunos problemas con tu entrada.</span>
         <ul class="mt-2">
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
@@ -28,7 +28,7 @@
 
 @if (session('success'))
     <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mt-4 container mx-auto" role="alert">
-        <strong class="font-bold">Success!</strong>
+        <strong class="font-bold">Exito!</strong>
         <span class="block sm:inline">{{ session('success') }}</span>
     </div>
 @endif
@@ -84,11 +84,11 @@
                 </div>
                 @if(Auth::check() && Auth::user()->isAdmin())
                 <div class="px-6 pt-4 pb-2 mb-12 flex space-x-2">
-                    <a href="{{ route('staff.edit', $staff->artist_name) }}" class="btn-pink">Edit</a>
+                    <a href="{{ route('staff.edit', $staff->artist_name) }}" class="btn-pink">Editar</a>
                     <form action="{{ route('staff.destroy', $staff->artist_name) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this staff member?');" class="inline-block">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn-pink">Delete</button>
+                        <button type="submit" class="btn-pink">Eliminar</button>
                     </form>
                 </div>
             @endif

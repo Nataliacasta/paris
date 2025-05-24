@@ -3,9 +3,11 @@
 @section('content')
 
 <div class="relative">
-    <div class="bg-home-page1 grid grid-cols-1 m-auto h-screen bg-cover bg-fixed">
+    <div class="bg-white flex items-center justify-center min-h-screen">
+           <img src="{{ asset('images/logo.jpeg') }}" alt="Logo Sala de Belleza Paris" class="width: 600px; height: auto;" />
+
         <div class="absolute inset-0 bg-black opacity-25"></div>
-        <div class="flex text-gray-100 pt-10 pb-10 relative z-10">
+            <div class="flex text-black -100 pt-10 pb-10 relative z-10">
             <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block text-center">
                 <h1 class="sm:text-5xl uppercase font-bold pb-14">
                  Bienvenido a sala de belleza Paris 

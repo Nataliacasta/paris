@@ -39,7 +39,7 @@
                         <tr>
                             <td>{{ $service->service_name }}</td>
                             <td>{{ $service->service_description }}</td>
-                            <td>€{{ number_format($service->service_price, 2) }}</td>
+                            <td>€{{ number_format($service->service_price, 0, ',') }} COP</td>
                             <td>
                                 <input type="radio" name="service_id" value="{{ $service->service_id }}" {{ $appointment->service_id == $service->service_id ? 'checked' : '' }} required>
                             </td>

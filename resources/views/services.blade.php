@@ -6,9 +6,9 @@
 <div class="relative bg-cover bg-center h-96 mb-10" style="background-image: url('{{ asset('css/images/services.png') }}'); background-size: cover;">
     <div class="absolute inset-0 bg-black opacity-50"></div>
     <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
-        <h1 class="text-5xl font-bold">Our Services</h1>
+        <h1 class="text-5xl font-bold">Nuestros servicios</h1>
         <nav class="text-sm mt-2">
-            <a href="/" class="hover:text-gray-300">Home</a> » <span>Services</span>
+            <a href="/" class="hover:text-gray-300">Inicio</a> » <span>Servicios</span>
         </nav>
     </div>
 </div>
@@ -16,8 +16,8 @@
 <!-- Error and Success Messages -->
 @if ($errors->any())
     <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-4 container mx-auto" role="alert">
-        <strong class="font-bold">Whoops!</strong>
-        <span class="block sm:inline">There were some problems with your input.</span>
+        <strong class="font-bold">Ups!</strong>
+        <span class="block sm:inline">Hubo algunos problemas con tu entrada.</span>
         <ul class="mt-2">
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
@@ -84,18 +84,18 @@
                 </div>
                 @if(Auth::check() && Auth::user()->isAdmin())
                     <div class="px-6 pt-4 pb-2 mb-12 flex space-x-2">
-                        <a href="{{ route('services.edit', $service->service_name) }}" class="btn-pink">Edit</a>
+                        <a href="{{ route('services.edit', $service->service_name) }}" class="btn-pink">Editar</a>
                         <form action="{{ route('services.destroy', $service->service_name) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this service?');" class="inline-block">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn-pink">Delete</button>
+                            <button type="submit" class="btn-pink">Eliminar</button>
                         </form>
                     </div>
                 @endif
             </div>
         @empty
             <div class="col-span-4 text-center">
-                <p>No services found.</p>
+                <p>No se encontraron servicios.</p>
             </div>
         @endforelse
     </div>
