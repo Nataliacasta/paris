@@ -20,7 +20,7 @@
                     <a href="/" class="nav-link">Inicio</a>
                     <a href="/aboutUs" class="nav-link">Acerca de nosotros</a>
                     <a href="/services" class="nav-link">Servicios</a>
-                    <a href="/appointments" class="nav-link">Equipo</a>
+                    <a href="/appointments" class="nav-link">citas</a>
                     <a href="/paint" class="nav-link">Crear</a>
                     <a href="{{ url('/') }}" class="nav-logo">
                         PARIS🗼

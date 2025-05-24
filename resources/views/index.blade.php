@@ -27,45 +27,55 @@
             <h2 class="text-4xl lg:text-5xl text-gray-700 font-bold mb-4">Nuestros Servicios</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="{{ asset('css/images/nailp.png') }}"  alt="Advanced Nail Treatments" class="w-full h-auto">
+                    <img src="{{ asset('images/uñastratamiento.jpeg') }}"  alt="Advanced Nail Treatments" class="w-full h-auto">
                     <div class="p-6">
                         <h2 class="text-xl font-semibold font-normal text-customPink mb-4">Tratamientos avanzados de uñas</h2>
                         <p class="text-lg text-gray-700">Descubre nuestra gama de tratamientos especializados para uñas. Ya sea que busques un diseño de uñas elaborado, extensiones o diseños únicos, nuestros talentosos técnicos te ayudarán.</p>
                     </div>
                 </div>            
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="{{ asset('css/images/skinc.png') }}" alt="Luxury Facials" class="w-full h-auto">
+                    <img src="{{ asset('images/tintes.webp') }}" alt="Luxury Facials" class="w-full h-auto">
                     <div class="p-6">
-                        <h2 class="text-xl font-semibold text-customPink mb-4">Tintes</h2>
-                        <p class="text-lg text-gray-700">Revitalize your skin with our rejuvenating facial treatments. From deep cleansing to hydrating masks, our skilled estheticians will leave your skin glowing and refreshed.</p>
+                        <h2 class="text-xl font-semibold text-customPink mb-4">Descubre nuestra gama de tintes profesionales y transforma tu estilo.</h2>
+                        <p class="text-lg text-gray-700">Ya sea que busques un cambio sutil, una cobertura perfecta de canas o un color vibrante y atrevido, nuestros coloristas expertos están listos para asesorarte y lograr el look que deseas.
+                                                        Utilizamos productos de alta calidad que cuidan tu cabello mientras lo llenan de vida.</p>
                     </div>
                 </div>            
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="{{ asset('css/images/massage.png') }}" alt="Glamour Massage" class="w-full h-auto">
+                    <img src="{{ asset('images/Maquillaje.jpeg') }}" alt="Glamour Massage" class="w-full h-auto">
                     <div class="p-6">
-                        <h2 class="text-xl font-semibold text-customPink mb-4">Maquillaje</h2>
-                        <p class="text-lg text-gray-700">Relax and unwind with our soothing foot massage. Our experienced therapists will melt away tension and leave your feet feeling refreshed and revitalized.</p>
+                        <h2 class="text-xl font-semibold text-customPink mb-4">Realza tu belleza con nuestro servicio de maquillaje profesional.</h2>
+                        <p class="text-lg text-gray-700">Ya sea para un evento especial, una sesión de fotos o simplemente para consentirte, nuestros maquillistas expertos crearán el look perfecto para ti.
+                                                        Desde estilos naturales y elegantes hasta acabados glamorosos e impactantes, trabajamos con productos de alta gama para asegurar un acabado impecable y duradero.</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="{{ asset('css/images/massage.png') }}" alt="Glamour Massage" class="w-full h-auto">
+                    <img src="{{ asset('images/depilacion1.jpg') }}" alt="Glamour Massage" class="w-full h-auto">
                     <div class="p-6">
-                        <h2 class="text-xl font-semibold text-customPink mb-4">Depialcion</h2>
-                        <p class="text-lg text-gray-700">Relax and unwind with our soothing foot massage. Our experienced therapists will melt away tension and leave your feet feeling refreshed and revitalized.</p>
+                        <h2 class="text-xl font-semibold text-customPink mb-4">Depilacion Piel suave, sensación increíble.</h2>
+                        <p class="text-lg text-gray-700">Descubre nuestros servicios de depilación profesional, diseñados para cuidar tu piel y brindarte resultados duraderos.
+                                                        Ya sea con cera tradicional, cera tibia o técnica brasileña, nuestro equipo especializado te garantiza una experiencia cómoda, higiénica y efectiva.
+                                                        ✨ Ideal para rostro, piernas, brazos, axilas y zona íntima.
+                                                        👩‍🔬 Atención personalizada y productos de calidad dermatológica.
+                                                        💆‍♀️ Reserva tu cita y disfruta de una piel libre de vello como nunca antes.</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="{{ asset('css/images/massage.png') }}" alt="Glamour Massage" class="w-full h-auto">
+                    <img src="{{ asset('images/Peinado.jpg') }}" alt="Glamour Massage" class="w-full h-auto">
                     <div class="p-6">
-                        <h2 class="text-xl font-semibold text-customPink mb-4">Peinados</h2>
-                        <p class="text-lg text-gray-700">Relax and unwind with our soothing foot massage. Our experienced therapists will melt away tension and leave your feet feeling refreshed and revitalized.</p>
+                        <h2 class="text-xl font-semibold text-customPink mb-4">Luce espectacular en cualquier ocasión con nuestros peinados profesionales.</h2>
+                        <p class="text-lg text-gray-700">Desde ondas suaves y recogidos románticos hasta estilos sofisticados y modernos, nuestro equipo está listo para crear el look perfecto para ti.
+                                                        Ideal para eventos, fiestas, bodas o simplemente para sentirte increíble.
+                                                      💇‍♀️ Trabajamos con técnicas actuales y productos de alto nivel para un acabado duradero.
+                                                      ✨ Asesoría personalizada incluida.
+                                                        📅 Agenda tu cita y déjanos resaltar tu belleza con estilo.</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="{{ asset('css/images/massage.png') }}" alt="Glamour Massage" class="w-full h-auto">
+                    <img src="{{ asset('images/keratina.jpg') }}" alt="Glamour Massage" class="w-full h-auto">
                     <div class="p-6">
-                        <h2 class="text-xl font-semibold text-customPink mb-4">Keratina organica</h2>
-                        <p class="text-lg text-gray-700">Relax and unwind with our soothing foot massage. Our experienced therapists will melt away tension and leave your feet feeling refreshed and revitalized.</p>
+                        <h2 class="text-xl font-semibold text-customPink mb-4">Recupera el brillo y la suavidad de tu cabello con nuestra keratina orgánic</h2>
+                        <p class="text-lg text-gray-700">Un tratamiento libre de químicos agresivos, ideal para alisar, nutrir y fortalecer tu melena sin dañar su estructura natural.</p>
                     </div>
                 </div>
             </div>
@@ -80,30 +90,30 @@
                 <h2 id="about-heading" class="text-3xl lg:text-4xl font-bold mb-4">Nuestros Horarios</h2>
                 <ul class="text-base lg:text-lg text-gray-700 leading-relaxed">
                     <li class="py-2 flex items-center">
-                        <span class="text-customPink">Lunes:</span>&nbsp;&nbsp;9:00 AM - 6:00 PM
+                        <span class="text-customPink">Lunes:</span>&nbsp;&nbsp;8:00 AM - 7:00 PM
                     </li>
                     <li class="py-2 flex items-center">
-                        <span class="text-customPink">Martes:</span>&nbsp;&nbsp;9:00 AM - 6:00 PM
+                        <span class="text-customPink">Martes:</span>&nbsp;&nbsp;8:00 AM - 7:00 PM
                     </li>
                     <li class="py-2 flex items-center">
-                        <span class="text-customPink">Miercoles:</span>&nbsp;&nbsp;9:00 AM - 6:00 PM
+                        <span class="text-customPink">Miercoles:</span>&nbsp;&nbsp;8:00 AM - 7:00 PM
                     </li>
                     <li class="py-2 flex items-center">
-                        <span class="text-customPink">Jueves:</span>&nbsp;&nbsp;9:00 AM - 6:00 PM
+                        <span class="text-customPink">Jueves:</span>&nbsp;&nbsp;8:00 AM - 7:00 PM
                     </li>
                     <li class="py-2 flex items-center">
-                        <span class="text-customPink">Viernes:</span>&nbsp;&nbsp;9:00 AM - 6:00 PM
+                        <span class="text-customPink">Viernes:</span>&nbsp;&nbsp;8:00 AM - 7:00 PM
                     </li>
                     <li class="py-2 flex items-center">
-                        <span class="text-customPink">Sabado:</span>&nbsp;&nbsp;10:00 AM - 4:00 PM
+                        <span class="text-customPink">Sabado:</span>&nbsp;&nbsp;9:00 AM - 7:00 PM
                     </li>
                     <li class="py-2 flex items-center">
-                        <span class="text-customPink">Domingo:</span>&nbsp;&nbsp;Cerramos
+                        <span class="text-customPink">Domingo y festivos :</span>&nbsp;&nbsp;8:00 AM - 12:00 PM
                     </li>
                 </ul>
             </div>
             <div class="w-full md:w-1/2">
-                <img src="https://www.byrdie.com/thmb/0nSkcCCvoPE8mUzKJ-7RJH-sf64=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/OliveJune-23746c4d1e7949ffbae06bf09ed241bf.jpg" alt="OliveJune Image" class="w-full md:w-3/4 lg:w-2/3 h-auto rounded-lg shadow-lg">
+                <img src="{{ asset('images/salondebelleza.jpeg') }}" alt="OliveJune Image" class="w-full md:w-3/4 lg:w-2/3 h-auto rounded-lg shadow-lg">
             </div>
         </div>
     </div>
@@ -117,12 +127,12 @@
             <div class="flex flex-wrap justify-center">
                 <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 px-4 mb-8">
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://i.pinimg.com/originals/8f/9c/80/8f9c804fe64d74cb60ec18936ba8fa9c.jpg" alt="Nail Art 1" class="w-full h-auto rounded-lg shadow-lg">
+                        <img src="{{ asset('images/cejas.jpeg') }}" alt="Nail Art 1" class="w-full h-auto rounded-lg shadow-lg">
                     </div>
                 </div>
                 <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 px-4 mb-8">
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://i.pinimg.com/originals/c7/93/0a/c7930a3022399c62c8e7dbd33bf92362.jpg" alt="Nail Art 2" class="w-full h-auto rounded-lg shadow-lg">
+                        <img src="{{ asset('images/peinado.jpeg') }}" alt="Nail Art 2" class="w-full h-auto rounded-lg shadow-lg">
                     </div>
                 </div>
                 <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 px-4 mb-8">
@@ -142,15 +152,15 @@
 
 <section id="news" class="py-12">
     <div class="container mx-auto">
-        <h2 class="text-3xl lg:text-4xl font-bold mb-4">Últimas noticias</h2>
+        <h2 class="text-3xl lg:text-4xl font-bold mb-4">¡Nuestras Promociones para este mes!</h2>
         <div class="flex flex-wrap justify-center">
             <!-- News Article 1 -->
             <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 px-4 mb-8">
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://i.pinimg.com/564x/33/b7/f9/33b7f94c8dcd3f4f342bd398c1fc50c7.jpg" alt="News Article 1" class="w-full h-64 object-cover">
+                    <img src="{{ asset('images/promouñas.jpeg') }}" alt="News Article 1" class="w-full h-64 object-cover">
                     <div class="p-4">
-                        <h3 class="text-xl font-semibold mb-2">Supporting Local: Glamour Touch Donates Proceeds to Make A Wish Foundation</h3>
-                        <p class="text-gray-700 mb-2">As part of our commitment to our community, we're donating a portion of our proceeds to support the Charity's essential services. Join us in making a difference together!</p>
+                        <h3 class="text-xl font-semibold mb-2">Conciente a tu mamá en su mes</h3>
+                        <p class="text-gray-700 mb-2">Contrata uno de nuestros servicios y disfruta de increíbles promociones.</p>
                     </div>
                 </div>
             </div>
@@ -175,40 +185,9 @@
                 </div>
             </div>
         </div>
-        <div class="text-center mt-8">
-            <a href="https://www.dundalkdemocrat.ie/" class="inline-block bg-customPink hover:bg-customPink text-white font-bold py-2 px-4 rounded">Ver mas noticias</a>
-        </div>
+        
     </div>
 </section>
-
-
-
-
-
-<section class="py-12">
-    <div class="container mx-auto">
-        <h2 class="text-3xl lg:text-4xl font-bold text-customPink mb-4">Uñas para todos los presupuestos</h2>
-        <p class="text-lg text-gray-500 mb-6">FROM 01.01.24 TO 31.12.24</p>
-
-        <div class="flex flex-col lg:flex-row items-center lg:space-x-8">
-            <!-- Promotion -->
-            <div class="w-full lg:w-1/2 mb-8 lg:mb-0 flex justify-center lg:justify-start">
-                <div class="flex flex-col lg:flex-row lg:space-x-8">
-                    <div class="w-32 h-32 rounded-full overflow-hidden mb-4">
-                        <img src="{{ asset('css/images/unidays.png') }}" alt="Luxury Facials" class="w-full h-full object-cover">
-                    </div>
-                    <div class="w-32 h-32 rounded-full overflow-hidden mb-4">
-                        <img src="{{ asset('css/images/dkit.png') }}" alt="Promotion Image" class="w-full h-full object-cover">
-                    </div>
-                    <div class="w-32 h-32 rounded-full overflow-hidden mb-4">
-                        <img src="{{ asset('css/images/intl.png') }}" alt="Promotion Image" class="w-full h-full object-cover">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 
 
 @endsection
