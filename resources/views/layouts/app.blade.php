@@ -35,7 +35,7 @@
                         @endif
                     @else
                         <span class="nav-user">{{ Auth::user()->name }}</span>
-                        <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+                        <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Salir') }}</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
                             {{ csrf_field() }}
                         </form>
@@ -70,9 +70,9 @@
     </script>
     <script>
         var botmanWidget = {
-            aboutText: 'Start the conversation with Hi',
-            introMessage: 'WELCOME TO GLAMOUR TOUCH'
-        };
+            aboutText: 'Asistente Virtual',
+            introMessage: "✋ ¡Hola! ¿En qué puedo ayudarte?",
+            title: 'Soporte'
     </script>
     <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
 </body>

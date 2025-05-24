@@ -3,7 +3,7 @@
 @section('content')
 
 <section id="hero-2" class="bg-fixed hero-section division bg-heroimg2 bg-cover pt-5">
-    <p class="h2glamour">Create your own Nail Designs</p>
+    <p class="h2glamour">Crea tus propios disseños de uñas</p>
 </section>
 <div class="container" style="position: relative;">
     <div class="row justify-content-center" style="position: relative;">
@@ -22,13 +22,13 @@
                     </div>
                     <div id="toolbar">
                         <input type="color" id="colorPicker">
-                        <button id="clearButton">Clear</button>
-                        <button id="drawScribbleButton">Scribble</button>
+                        <button id="clearButton">Borrar</button>
+                        <button id="drawScribbleButton">Pincel</button>
                         <input type="range" id="brushThicknessSlider" min="1" max="100" value="10" onchange="setRadius(this.value)">
-                        <button id="drawPenButton">Pen</button>
-                        <button class="imageButton" onclick="addImageToCanvas('css/images/flower.png')">Add Flower</button>
-                        <button class="imageButton" onclick="addImageToCanvas('css/images/heart.png')">Add Heart</button>
-                        <button id="saveButton">Save</button>
+                        <button id="drawPenButton">Lapiz</button>
+                        <button class="imageButton" onclick="addImageToCanvas('css/images/flower.png')">Añadir flor</button>
+                        <button class="imageButton" onclick="addImageToCanvas('css/images/heart.png')">Añadir corazón</button>
+                        <button id="saveButton">Guardar</button>
                     </div>
                 </div>
             </div>
