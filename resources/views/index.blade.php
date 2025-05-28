@@ -2,22 +2,21 @@
 
 @section('content')
 
-<div class="relative">
-    <div class="bg-white flex items-center justify-center min-h-screen">
-           <img src="{{ asset('images/logo.jpeg') }}" alt="Logo Sala de Belleza Paris" class="width: 600px; height: auto;" />
+<div class="relative min-h-screen bg-gradient-to-b from-pink-300 via-pink-200 to-purple-200">
+    <div class="flex flex-col items-center justify-center min-h-screen text-center px-4 relative z-10">
+        
+        <!-- Logo sin recuadro -->
+        <img src="{{ asset('images/logo.png') }}" alt="Logo Sala de Belleza Paris" class="w-72 md:w-96 mb-6" />
 
-        <div class="absolute inset-0 bg-black opacity-25"></div>
-            <div class="flex text-black -100 pt-10 pb-10 relative z-10">
-            <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block text-center">
-                <h1 class="sm:text-5xl uppercase font-bold pb-14">
-                 Bienvenido a sala de belleza Paris 
-                </h1>
-                <div class="my-1"></div>
-                <a href="/appointments" class="buttonbg">
-                    ¡Reserva ahora!
-                </a>
-            </div>
-        </div>
+        <!-- Título -->
+        <h1 class="text-black text-4xl md:text-5xl font-bold uppercase mb-8">
+            Bienvenido a Sala de Belleza Paris
+        </h1>
+
+        <!-- Botón de reserva -->
+        <a href="/appointments" class="bg-pink-500 hover:bg-pink-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition duration-300">
+            ¡Reserva ahora!
+        </a>
     </div>
 </div>
 
