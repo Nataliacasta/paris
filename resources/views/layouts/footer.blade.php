@@ -16,12 +16,13 @@
       <div class="footer-section">
           <h3>Contactanos</h3>
           <ul>
-            <li>Sala_de_Belleza_paris calle 13 manzana C/ Barrio villa karol Garzon huila</li>
-                <li>saladebellezaparis@gmail.com</li>
                 <li>+57 3124359106</li>
-                <li>lunes-viernes: 8AM -7PM</li>
                 <li>Sabado: 9AM - 7PM</li>
+                <li>Sala_de_Belleza_paris </li>
+                <li>lunes-viernes: 8AM -7PM</li>
                 <li>Domingo Y festivos: 8PM-12PM</li>
+                <li>saladebellezaparis@gmail.com</li>
+                <li>calle 13 manzana C/ Barrio villa karol Garzon huila</li>
           </ul>
       </div>
       <div class="footer-section">
