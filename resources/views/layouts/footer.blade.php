@@ -1,19 +1,18 @@
 <footer>
   <div class="footer-container">
       <div class="footer-section">
-          <section id="contacto" class="contacto py-8 bg-gray-50">
-            <h2 class="text-3xl font-semibold mb-4 text-center text-gray-800">Redes</h2>
-
-            <nav class="flex flex-col items-center space-y-6" aria-label="Redes sociales">
-                <a href="#" aria-label="Facebook" class="transform hover:scale-110 transition-transform duration-300">
-                    <img src="images/facebook.png" alt="Facebook" class="w-16 h-16">
-                </a>
-                <a href="#" aria-label="Instagram" class="transform hover:scale-110 transition-transform duration-300">
-                    <img src="images/Instagram.png" alt="Instagram" class="w-16 h-16">
-                </a>
+            <section id="contacto" class="footer-section text-center">
+                <h3 class="font-semibold mb-6 text-pink-custom">Redes Sociales</h3>
+                <nav class="socials-container" aria-label="Redes sociales">
+                    <a href="https://www.facebook.com/share/1YdY5Z9HaM/" target="_blank" aria-label="Facebook" class="social-icon facebook">
+                        <img src="images/facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/sala_de_belleza_paris?igsh=d2lqbWUwZ3c0anZ2" target="_blank" aria-label="Instagram" class="social-icon instagram">
+                        <img src="images/Instagram.png" alt="Instagram">
+                    </a>
                 </nav>
-        </section>
-      </div>
+            </section>
+        </div>
       <div class="footer-section">
           <h3>Contactanos</h3>
           <ul>
@@ -29,7 +28,7 @@
           <h3>Desarrolladores</h3>
           <ul>
               <li><a href="#">Natalia Castañeda</a></li>
-              <li><a href="#">Brigith Simbaqueba</a></li>
+              <li><a href="#">Brigith longas</a></li>
               <li><a href="#">Yenifer Florez</a></li>
           </ul>
       </div>
