@@ -158,30 +158,31 @@
             <!-- News Article 1 -->
             <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 px-4 mb-8">
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="{{ asset('images/promouñas.jpeg') }}" alt="News Article 1" class="w-full h-64 object-cover">
+                    <img src="{{ asset('images/tarjetadefidelidad.jpg') }}" alt="News Article 1" class="w-full h-64 object-cover">
                     <div class="p-4">
-                        <h3 class="text-xl font-semibold mb-2">Conciente a tu mamá en su mes</h3>
-                        <p class="text-gray-700 mb-2">Contrata uno de nuestros servicios y disfruta de increíbles promociones.</p>
+                        <h3 class="text-xl font-semibold mb-2">Premiamos tu fidelidad</h3>
+                        <p class="text-gray-700 mb-2">Porque tu preferencia merece recompensa, ahora puedes acumular beneficios cada vez que nos visitas.
+                                                      Con nuestra tarjeta de fidelidad obtendrás</p>
                     </div>
                 </div>
             </div>
             <!-- News Article 2 -->
             <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 px-4 mb-8">
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://i.pinimg.com/564x/c9/4a/c5/c94ac533bc0d6083ecd92bfc728b3d80.jpg" alt="News Article 2" class="w-full h-64 object-cover">
+                    <img src="{{ asset('images/promosion.jpg') }}" alt="News Article 2" class="w-full h-64 object-cover">
                     <div class="p-4">
-                        <h3 class="text-xl font-semibold mb-2">Nail Salon of the Year 2024: Celebrating Our Victory!</h3>
-                        <p class="text-gray-700 mb-2">Proudly announcing our triumph as the esteemed Nail Salon of the Year 2024</p>
+                        <h3 class="text-xl font-semibold mb-2">Consejos de expertos para el cuidado de las uñas</h3>
+                        <p class="text-gray-700 mb-2">Para mantener uñas sanas y hermosas con nuestra guía completa sobre el cuidado de las uñas.</p>
                     </div>
                 </div>
             </div>
             <!-- News Article 3 -->
             <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 px-4 mb-8">
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://i.pinimg.com/736x/66/b1/41/66b141da8b40c83a3c3204de47d12fcc.jpg" alt="News Article 3" class="w-full h-64 object-cover">
+                <img src="{{ asset('images/promosion2.jpg') }}" alt="News Article 3" class="w-full h-64 object-cover">
                     <div class="p-4">
-                        <h3 class="text-xl font-semibold mb-2">Consejos de expertos para el cuidado de las uñas</h3>
-                        <p class="text-gray-700 mb-2">Aprenda consejos esenciales de expertos para mantener uñas sanas y hermosas con nuestra guía completa sobre el cuidado de las uñas.</p>
+                        <h3 class="text-xl font-semibold mb-2">Realiza tu idea de peinado con nosotros</h3>
+                        <p class="text-gray-700 mb-2"> Luce un cabello radiante y bien peinado con nuestra guía completa de cuidado y estilo</p>
                     </div>
                 </div>
             </div>
