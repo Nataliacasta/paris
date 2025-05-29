@@ -174,20 +174,20 @@
         <table class="appointment_table w-full mt-6">
             <thead>
                 <tr>
-                    <th>Staff Name</th>
-                    <th>Service Name</th>
-                    <th>Time</th>
-                    <th>Date</th>
-                    <th>Price</th>
-                    <th>Update</th>
-                    <th>Cancel</th>
+                    <th>Nombre del personal</th>
+                    <th>Nombre del servicio</th>
+                    <th>Hora</th>
+                    <th>Fecha</th>
+                    <th>Precio</th>
+                    <th>Actualizar</th>
+                    <th>Cancelar</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($userAppointments as $appointment)
                 <tr>
-                    <td>{{ $appointment->staff->artist_name ?? 'Staff Not Found' }}</td>
-                    <td>{{ $appointment->service->service_name ?? 'Service Not Found' }}</td>
+                    <td>{{ $appointment->staff->artist_name ?? 'Personal no encontrado' }}</td>
+                    <td>{{ $appointment->service->service_name ?? 'Servicio no encontrado' }}</td>
                     <td>{{ $appointment->time }}</td>
                     <td>{{ $appointment->date }}</td>
                     <td>€{{ number_format($service->service_price, 0, ',') }} COP</td>
