@@ -7,7 +7,7 @@
     <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
         <h1 class="text-5xl font-bold">Reservar una cita</h1>
         <nav class="text-sm mt-2">
-            <a href="/" class="hover:text-gray-300">Inicio</a> » <span>Appointments</span>
+            <a href="/" class="hover:text-gray-300">Inicio</a> » <span>Citas</span>
         </nav>
     </div>
 </div>
@@ -88,7 +88,7 @@
                         <tr>
                             <td>{{ $service->service_name }}</td>
                             <td>{{ $service->service_description }}</td>
-                            <td>€{{ number_format($service->service_price, 0, ',') }} COP</td>
+                            <td>{{ number_format($service->service_price, 0, ',') }} COP</td>
                             <td>
                                 <input type="radio" name="service_id" value="{{ $service->service_id }}" required>
                             </td>
@@ -190,7 +190,7 @@
                     <td>{{ $appointment->service->service_name ?? 'Servicio no encontrado' }}</td>
                     <td>{{ $appointment->time }}</td>
                     <td>{{ $appointment->date }}</td>
-                    <td>€{{ number_format($service->service_price, 0, ',') }} COP</td>
+                    <td>{{ number_format($service->service_price, 0, ',') }} COP</td>
                     <td>
                         <a href="{{ route('appointments.edit', $appointment->appointment_id) }}" class="btn-pink">Actualizar</a>
                     </td>
@@ -228,11 +228,11 @@
             <tbody>
                 @forelse($appointments as $appointment)
                 <tr>
-                    <td>{{ $appointment->staff->artist_name ?? 'Staff Not Found' }}</td>
-                    <td>{{ $appointment->service->service_name ?? 'Service Not Found' }}</td>
+                    <td>{{ $appointment->staff->artist_name ?? 'Personal no encontrado' }}</td>
+                    <td>{{ $appointment->service->service_name ?? 'Servicio no encontrado' }}</td>
                     <td>{{ $appointment->time }}</td>
                     <td>{{ $appointment->date }}</td>
-                    <td>€{{ number_format($service->service_price, 0, ',') }} COP</td>
+                    <<td>{{ number_format($appointment->service->service_price ?? 0, 0, ',') }} COP</td>
                     <td>
                         <form action="{{ route('appointments.destroy', $appointment->appointment_id) }}" method="POST">
                             @csrf

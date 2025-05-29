@@ -3,7 +3,19 @@
 @section('content')
 
 <section id="hero-2" class="bg-fixed hero-section division bg-heroimg2 bg-cover pt-5">
-    <p class="h2glamour">Crea tus propios disseños de uñas</p>
+    <p class="h2glamour">Crea tus propios diseños de uñas</p>
+ <style>
+.h2glamour {
+    font-size: 3rem; /* Aumentado */
+    font-weight: 800; /* Más grueso */
+    text-align: center;
+    background: linear-gradient(90deg,rgb(240, 114, 158),rgb(196, 124, 238));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+}
+</style>
 </section>
 <div class="container" style="position: relative;">
     <div class="row justify-content-center" style="position: relative;">
