@@ -44,17 +44,7 @@
             </div>
         </div>
 
-        <div class="flex w-1/2 flex-wrap">
-            <div class="w-1/2 p-1 md:p-2">
-                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://abeautifulmess.com/wp-content/uploads/2024/01/spring-nail-ideas-pink-french-chrome-barbie-1-1024x1024.jpg" />
-            </div>
-            <div class="w-1/2 p-1 md:p-2">
-                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://i.etsystatic.com/34389166/r/il/f5974f/3711798859/il_570xN.3711798859_jbbw.jpg" />
-            </div>
-            <div class="w-full p-1 md:p-2">
-                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://i.pinimg.com/736x/43/87/82/4387826a7db81459057e314c02fddf97.jpg" />
-            </div>
-        </div>
+       
         
     </div>
 </div>
