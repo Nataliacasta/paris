@@ -23,7 +23,7 @@
         <!-- Service Selection -->
         <h1 class="text-3xl font-semibold text-center mb-4">Actualizar Citas</h1>
         <div class="mb-4 ">
-            <label for="service_id" class="block text-gray-700 text-xl font-bold mb-2">Service</label>
+            <label for="service_id" class="block text-gray-700 text-xl font-bold mb-2">Servicio</label>
             <div class="overflow-x-auto">
                 <table class="Service_table w-full">
                     <thead>

@@ -232,7 +232,7 @@
                     <td>{{ $appointment->service->service_name ?? 'Servicio no encontrado' }}</td>
                     <td>{{ $appointment->time }}</td>
                     <td>{{ $appointment->date }}</td>
-                    <<td>{{ number_format($appointment->service->service_price ?? 0, 0, ',') }} COP</td>
+                    <td>{{ number_format($appointment->service->service_price ?? 0, 0, ',') }} COP</td>
                     <td>
                         <form action="{{ route('appointments.destroy', $appointment->appointment_id) }}" method="POST">
                             @csrf
