@@ -30,7 +30,7 @@
           <ul>
               <li><a href="#">Natalia Castañeda 🌷</a></li>
               <li><a href="#">Brigith longas 💗</a></li>
-              <li><a href="#">Yenifer Florez</a></li>
+              <li><a href="#">Yenifer Florez💅</a></li>
           </ul>
       </div>
   </div>
