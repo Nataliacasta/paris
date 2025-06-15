@@ -2,107 +2,101 @@
 
 @section('content')
 
-<section id="hero-2" class="bg-fixed hero-section division bg-heroimg2 bg-cover pt-5">
-    <p class="h2glamour">Crea tus propios diseños de uñas</p>
- <style>
-.h2glamour {
-    font-size: 3rem; /* Aumentado */
-    font-weight: 800; /* Más grueso */
-    text-align: center;
-    background: linear-gradient(90deg,rgb(240, 114, 158),rgb(196, 124, 238));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
-}
-</style>
+<section id="hero-2" class="relative bg-heroimg2 bg-cover bg-fixed text-center py-24">
+    <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent drop-shadow-md">
+        Crea tus propios diseños de uñas
+    </h2>
 </section>
-<div class="container" style="position: relative;">
-    <div class="row justify-content-center" style="position: relative;">
-        <div class="col-md-10">
-            <div class="card">
-                <div class="card-header"><br></div>
-                <div class="card-body">
-                    <!-- Container for relative positioning -->
-                    <div style="position: relative;">
-                        <!-- Image of the hand with the nail -->
-                        <img src="{{ asset('css/images/nailhand2.png') }}" id="nailhandimg" alt="Nail Image" style="width: 100%; height: auto; display: block;">
-                        <!-- Canvas overlay for painting -->
-                        <canvas id="paintCanvas" width="1000" height="600" style="position: absolute; top: 0; left: 0;"></canvas>
-                        <!-- Toolbar -->
-                       
-                    </div>
-                    <div id="toolbar">
-                        <input type="color" id="colorPicker">
-                        <button id="clearButton">Borrar</button>
-                        <button id="drawScribbleButton">Pincel</button>
-                        <input type="range" id="brushThicknessSlider" min="1" max="100" value="10" onchange="setRadius(this.value)">
-                        <button id="drawPenButton">Lapiz</button>
-                        <button class="imageButton" onclick="addImageToCanvas('css/images/flower.png')">Añadir flor</button>
-                        <button class="imageButton" onclick="addImageToCanvas('css/images/heart.png')">Añadir corazón</button>
-                        <button id="saveButton">Guardar</button>
-                    </div>
-                </div>
-            </div>
+
+<div class="flex justify-center px-4 py-12">
+    <div class="w-full max-w-6xl bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="relative">
+            <img src="{{ asset('css/images/nailhand2.png') }}" id="nailhandimg" alt="Nail Image" class="w-full h-auto block">
+            <canvas id="paintCanvas" width="1000" height="600" class="absolute top-0 left-0 w-full h-auto"></canvas>
+        </div>
+
+        <div id="toolbar" class="flex flex-wrap items-center justify-center gap-4 p-4 bg-gray-100 border-t border-gray-300">
+            <input type="color" id="colorPicker" class="w-12 h-12 border rounded">
+            <input type="range" id="brushThicknessSlider" min="1" max="100" value="10" class="w-32">
+            
+            <button id="drawScribbleButton" class="bg-pink-500 hover:bg-pink-400 text-white font-semibold px-4 py-2 rounded">Pincel</button>
+            <button id="drawPenButton" class="bg-pink-500 hover:bg-pink-400 text-white font-semibold px-4 py-2 rounded">Lápiz</button>
+            <button id="clearButton" class="bg-pink-500 hover:bg-pink-400 text-white font-semibold px-4 py-2 rounded">Borrar</button>
+            <button onclick="addImageToCanvas('{{ asset('css/images/flower.png') }}')" class="bg-pink-500 hover:bg-pink-400 text-white font-semibold px-4 py-2 rounded">Añadir flor</button>
+            <button onclick="addImageToCanvas('{{ asset('css/images/heart.png') }}')" class="bg-pink-500 hover:bg-pink-400 text-white font-semibold px-4 py-2 rounded">Añadir corazón</button>
+            <button id="saveButton" class="bg-pink-500 hover:bg-pink-400 text-white font-semibold px-4 py-2 rounded">Guardar</button>
         </div>
     </div>
 </div>
-
+@endsection
 <script>
-    var color = '#000000'; // Default color
-    var canvas = document.getElementById('paintCanvas');
-    var context = canvas.getContext('2d');
-    var drawingMode = 'scribble'; // Default drawing mode
-    var isDrawing = false; // Flag to track drawing state
-    var radius = 10; // Default brush radius
+document.addEventListener("DOMContentLoaded", function () {
+    let color = '#000000';
+    let canvas = document.getElementById('paintCanvas');
+    let context = canvas.getContext('2d');
+    let drawingMode = 'scribble';
+    let isDrawing = false;
+    let radius = 10;
 
-    // Event listeners to handle drawing modes
-    document.getElementById("drawScribbleButton").addEventListener("click", function() {
+    // Función para obtener posición del mouse escalada correctamente
+    function getMousePos(canvas, evt) {
+        const rect = canvas.getBoundingClientRect();
+        const scaleX = canvas.width / rect.width;
+        const scaleY = canvas.height / rect.height;
+
+        return {
+            x: (evt.clientX - rect.left) * scaleX,
+            y: (evt.clientY - rect.top) * scaleY
+        };
+    }
+
+    document.getElementById("drawScribbleButton").addEventListener("click", function () {
         drawingMode = 'scribble';
     });
-    document.getElementById("drawPenButton").addEventListener("click", function() {
+
+    document.getElementById("drawPenButton").addEventListener("click", function () {
         drawingMode = 'pen';
     });
 
-    // Event listeners to handle painting
+    document.getElementById("brushThicknessSlider").addEventListener("input", function () {
+        radius = this.value;
+    });
+
+    document.getElementById("colorPicker").addEventListener("change", function () {
+        color = this.value;
+    });
+
     canvas.addEventListener('mousedown', startDrawing);
     canvas.addEventListener('mousemove', draw);
     canvas.addEventListener('mouseup', stopDrawing);
     canvas.addEventListener('mouseout', stopDrawing);
 
-    // Button click event listeners
-    document.getElementById("clearButton").addEventListener("click", clearCanvas);
-
     function startDrawing(e) {
-        // Set drawing mode and color
-        setColor();
-        isDrawing = true;
+        const pos = getMousePos(canvas, e);
         context.beginPath();
-        var x = e.offsetX;
-        var y = e.offsetY;
-        console.log("Start Drawing: x = " + x + ", y = " + y);
-        context.moveTo(x, y);
+        context.moveTo(pos.x, pos.y);
+        isDrawing = true;
+
         if (drawingMode === 'pen') {
-            context.lineWidth = 2; // Set pen width
-            context.lineCap = 'round'; // Set line cap style to round
-            context.strokeStyle = color; // Set stroke color
-            context.lineTo(x, y); // Draw a dot at the starting point
-            context.stroke(); // Draw a dot at the starting point
+            context.lineWidth = 2;
+            context.strokeStyle = color;
+            context.lineCap = 'round';
+            context.lineTo(pos.x, pos.y);
+            context.stroke();
         }
     }
 
     function draw(e) {
         if (!isDrawing) return;
-        var x = e.offsetX;
-        var y = e.offsetY;
-        console.log("Drawing: x = " + x + ", y = " + y);
+        const pos = getMousePos(canvas, e);
+
         if (drawingMode === 'scribble') {
-            context.lineTo(x, y);
-            context.strokeStyle = color; // Set stroke color
-            context.lineWidth = radius * 2; // Set scribble line width
+            context.lineTo(pos.x, pos.y);
+            context.strokeStyle = color;
+            context.lineWidth = radius * 2;
             context.stroke();
         } else if (drawingMode === 'pen') {
-            context.lineTo(x, y);
+            context.lineTo(pos.x, pos.y);
             context.stroke();
         }
     }
@@ -112,65 +106,33 @@
         context.closePath();
     }
 
-    var isAddingImage = false; // Flag to track if user is adding an image
-
-function addImageToCanvas(imageUrl) {
-    isAddingImage = true; // Set flag to true
-    var img = new Image();
-    img.onload = function() {
-        // Wait for user to click on canvas to position the image
-    };
-    img.src = imageUrl;
-
-    // Event listener to handle click on canvas
-    canvas.addEventListener('click', function(event) {
-        if (isAddingImage) {
-            var x = event.offsetX - img.width / 2; // Calculate X coordinate
-            var y = event.offsetY - img.height / 2; // Calculate Y coordinate
-            context.drawImage(img, x, y); // Draw the image
-            isAddingImage = false; // Reset flag
-        }
-    }, {once: true}); // Use {once: true} to remove the event listener after the first click
-}
-
-
-
-    function setColor() {
-        var newColor = document.getElementById("colorPicker").value;
-        color = newColor;
-        context.strokeStyle = color; // Set stroke color
-    }
-
-    function clearCanvas() {
+    document.getElementById("clearButton").addEventListener("click", function () {
         context.clearRect(0, 0, canvas.width, canvas.height);
+    });
+
+    function addImageToCanvas(imageUrl) {
+        let img = new Image();
+        img.src = imageUrl;
+        img.onload = function () {
+            canvas.addEventListener('click', function handler(event) {
+                const pos = getMousePos(canvas, event);
+                context.drawImage(img, pos.x - img.width / 2, pos.y - img.height / 2);
+                canvas.removeEventListener('click', handler);
+            });
+        };
     }
 
-    // Function to set the brush radius
-    function setRadius(value) {
-        radius = value;
-    }
+    // Hacer la función accesible desde los botones con onclick
+    window.addImageToCanvas = addImageToCanvas;
 
-    // Button click event listener to save canvas as image
-    document.getElementById("saveButton").addEventListener("click", saveCanvas);
-
-    function saveCanvas() {
-        // Get data URI of the canvas
-        var dataURL = canvas.toDataURL();
-        
-        // Create a temporary link element
-        var link = document.createElement('a');
+    document.getElementById("saveButton").addEventListener("click", function () {
+        let dataURL = canvas.toDataURL();
+        let link = document.createElement('a');
         link.href = dataURL;
-        
-        // Set filename (you can change it as needed)
         link.download = 'canvas_image.png';
-        
-        // Append link to the body and trigger a click event to download the image
         document.body.appendChild(link);
         link.click();
-        
-        // Remove the link from the body
         document.body.removeChild(link);
-    }
-
+    });
+});
 </script>
-@endsection
