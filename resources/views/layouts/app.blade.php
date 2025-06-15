@@ -8,6 +8,9 @@
   <script src="{{ asset('js/app.js') }}" defer></script>
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
   <link href="{{ mix('css/footer.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('css/booking.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+
   <style>
     /* --------- HEADER BASE --------- */
     #main-header {

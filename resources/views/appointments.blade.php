@@ -2,15 +2,16 @@
 
 @section('content')
 <!-- Header Section -->
-<div class="relative bg-cover bg-center h-96 mb-10" style="background-image: url('{{ asset('css/images/booking.png') }}'); background-size: cover;">
-    <div class="absolute inset-0 bg-black opacity-50"></div>
-    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
-        <h1 class="text-5xl font-bold">Reservar una cita</h1>
-        <nav class="text-sm mt-2">
-            <a href="/" class="hover:text-gray-300">Inicio</a> » <span>Citas</span>
+<div class="header-image">
+    <div class="overlay"></div>
+    <div class="header-content">
+        <h1 class="page-title">Reservar una cita</h1>
+        <nav class="breadcrumb">
+            <a href="/">Inicio</a> » <span>Citas</span>
         </nav>
     </div>
 </div>
+
 
 <script>
     function fetchAvailableTimes() {
@@ -22,7 +23,7 @@
                 .then(response => response.json())
                 .then(data => {
                     const timeSelect = document.getElementById('time');
-                    timeSelect.innerHTML = '<option value="">Select Time</option>';
+                    timeSelect.innerHTML = '<option value="">Seleccionar hora</option>';
                     data.availableTimes.forEach(time => {
                         const option = document.createElement('option');
                         option.value = time;
@@ -32,17 +33,16 @@
                 })
                 .catch(error => console.error('Error:', error));
         } else {
-            console.log("Staff ID or Date not selected or invalid");
+            console.log("Staff ID o fecha no seleccionados");
         }
     }
 </script>
 
-<!-- Error and Success Messages -->
+<!-- Mensajes -->
 @if ($errors->any())
-    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-4 container mx-auto" role="alert">
-        <strong class="font-bold">Ups!</strong>
-        <span class="block sm:inline">Hubo algunos problemas con tu entrada.</span>
-        <ul class="mt-2">
+    <div class="alert alert-error container mx-auto mt-4">
+        <strong>Ups!</strong> Hubo algunos problemas con tu entrada.
+        <ul class="mt-2 list-disc list-inside">
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
             @endforeach
@@ -51,33 +51,32 @@
 @endif
 
 @if (session('success'))
-    <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mt-4 container mx-auto" role="alert">
-        <strong class="font-bold">Success!</strong>
-        <span class="block sm:inline">{{ session('success') }}</span>
+    <div class="alert alert-success container mx-auto mt-4">
+        <strong>Éxito:</strong> {{ session('success') }}
     </div>
 @endif
 
 @if (session('error'))
-    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-4 container mx-auto" role="alert">
-        <strong class="font-bold">Error!</strong>
-        <span class="block sm:inline">{{ session('error') }}</span>
+    <div class="alert alert-error container mx-auto mt-4">
+        <strong>Error:</strong> {{ session('error') }}
     </div>
 @endif
 
-
-<!-- Book Appointment Form -->
+<!-- Formulario de Reservas -->
 @if (Auth::check() && Auth::user()->isUser())
+<h1 class="text-3xl font-semibold text-center mb-8">Reserva ahora</h1>
 <div class="container mx-auto mt-24"> 
-    <h1 class="text-3xl font-semibold text-center mb-8">Reserva ahora</h1>
-    <form method="POST" action="{{ route('appointments.store') }}" class="bg-white shadow-md rounded px-20 pt-6 pb-8 mb-4"> <!-- Adjusted padding to match table width -->
+    <form method="POST" action="{{ route('appointments.store') }}" class="booking-form">
         @csrf
+
+        <!-- Servicios -->
         <div class="mb-4">
-            <label for="service_id" class="block text-gray-700 text-xl font-bold mb-2">Servicio</label>
+            <label class="form-label">Servicio</label>
             <div class="overflow-x-auto">
-                <table class="Service_table w-full">
+                <table class="Service_table">
                     <thead>
                         <tr>
-                            <th>Nombre del servicio</th>
+                            <th>Nombre</th>
                             <th>Descripción</th>
                             <th>Precio</th>
                             <th>Seleccionar</th>
@@ -89,9 +88,7 @@
                             <td>{{ $service->service_name }}</td>
                             <td>{{ $service->service_description }}</td>
                             <td>{{ number_format($service->service_price, 0, ',') }} COP</td>
-                            <td>
-                                <input type="radio" name="service_id" value="{{ $service->service_id }}" required>
-                            </td>
+                            <td><input type="radio" name="service_id" value="{{ $service->service_id }}" required></td>
                         </tr>
                         @endforeach
                     </tbody>
@@ -99,10 +96,11 @@
             </div>
         </div>
 
+        <!-- Personal -->
         <div class="mb-4">
-            <label for="staff_id" class="block text-gray-700 text-xl font-bold mb-2">Personal</label>
+            <label class="form-label">Personal</label>
             <div class="overflow-x-auto">
-                <table class="staff_table w-full">
+                <table class="staff_table">
                     <thead>
                         <tr>
                             <th>Nombre</th>
@@ -120,62 +118,63 @@
                             </td>
                         </tr>
                         @empty
-                        <tr>
-                            <td colspan="3">No se encontró personal.</td>
-                        </tr>
+                        <tr><td colspan="3">No se encontró personal.</td></tr>
                         @endforelse
                     </tbody>
                 </table>
             </div>
         </div>
 
-        <div class="form-group mb-4">
-            <input type="hidden" class="form-control" id="customer_id" name="customer_id" value="{{ auth()->id() }}" required>
-        </div>
+        <!-- Cliente -->
+        <input type="hidden" id="customer_id" name="customer_id" value="{{ auth()->id() }}" required>
 
+        <!-- Calendario -->
         <div class="calendar mb-4">
-            <label for="date" class="block text-gray-700 text-sm font-bold mb-2">Fecha:</label>
-            <input type="hidden" id="date" name="date" value="" required>
-            <div id="displayDate" class="p-2 bg-white border border-gray-300 rounded-md shadow-sm text-gray-700 mb-4">Seleccione una fecha</div>
-            <div class="flex items-center justify-between px-6 py-3 bg-pink-400 rounded-md">
-                <button type="button" id="prevMonth" class="text-white focus:outline-none">Anterior</button>
-                <h2 id="currentMonth" class="text-white"></h2>
-                <button type="button" id="nextMonth" class="text-white focus:outline-none">Siguiente</button>
+            <label class="form-label">Fecha</label>
+            <input type="hidden" id="date" name="date" required>
+            <div id="displayDate" class="date-display">Seleccione una fecha</div>
+
+            <div class="calendar-nav">
+                <button type="button" id="prevMonth">Anterior</button>
+                <h2 id="currentMonth"></h2>
+                <button type="button" id="nextMonth">Siguiente</button>
             </div>
-            <div class="grid grid-cols-7 gap-2 p-4" id="calendar"></div>
+            <div class="calendar-grid" id="calendar"></div>
         </div>
 
+        <!-- Hora -->
         <div class="form-group mb-4">
-            <label for="time" class="block text-gray-700 text-sm font-bold mb-2">Tiempo:</label>
-            <select name="time" id="time" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+            <label for="time" class="form-label">Hora</label>
+            <select name="time" id="time" class="form-select" required>
                 <option value="">Seleccionar hora</option>
             </select>
         </div>
 
-        <div class="flex items-center justify-center">
+        <!-- Botón -->
+        <div class="form-actions">
             <button type="submit" class="btn-pink">Agregar cita</button>
         </div>
     </form>
 </div>
 @else
-<!-- Guest Login Prompt -->
+<!-- Vista para usuarios no autenticados -->
 <div class="container mx-auto mt-24 custom-form-width text-center">
     <h1 class="text-3xl font-semibold mb-8">Bienvenido a nuestro sistema de reservas</h1>
-    <p class="mb-4">Inicie sessión para reservar una cita</p>
+    <p class="mb-4">Inicie sesión para reservar una cita</p>
     <a href="{{ route('login') }}" class="btn-pink mb-12">Reserva ahora</a>
 </div>
 @endif
 
-<!-- User Appointments -->
+<!-- Citas del Usuario -->
 @if ($userAppointments->isNotEmpty())
 <h1 class="text-3xl font-semibold text-center mb-8">Mis Citas</h1>
 <div class="container mx-auto custom-form-width">
     <div class="overflow-x-auto">
-        <table class="appointment_table w-full mt-6">
+        <table class="appointment_table">
             <thead>
                 <tr>
-                    <th>Nombre del personal</th>
-                    <th>Nombre del servicio</th>
+                    <th>Personal</th>
+                    <th>Servicio</th>
                     <th>Hora</th>
                     <th>Fecha</th>
                     <th>Precio</th>
@@ -190,10 +189,8 @@
                     <td>{{ $appointment->service->service_name ?? 'Servicio no encontrado' }}</td>
                     <td>{{ $appointment->time }}</td>
                     <td>{{ $appointment->date }}</td>
-                    <td>{{ number_format($service->service_price, 0, ',') }} COP</td>
-                    <td>
-                        <a href="{{ route('appointments.edit', $appointment->appointment_id) }}" class="btn-pink">Actualizar</a>
-                    </td>
+                    <td>{{ number_format($appointment->service->service_price ?? 0, 0, ',') }} COP</td>
+                    <td><a href="{{ route('appointments.edit', $appointment->appointment_id) }}" class="btn-pink">Actualizar</a></td>
                     <td>
                         <form action="{{ route('appointments.destroy', $appointment->appointment_id) }}" method="POST">
                             @csrf
@@ -209,17 +206,17 @@
 </div>
 @endif
 
-<!-- All Appointments for Admin -->
+<!-- Citas Administrador -->
 @if(Auth::check() && Auth::user()->isAdmin())
 <h1 class="text-3xl font-semibold text-center mb-8">Todas las citas</h1>
 <div class="container mx-auto custom-form-width">
     <div class="overflow-x-auto">
-        <table class="appointment_table w-full mt-6">
+        <table class="appointment_table">
             <thead>
                 <tr>
-                    <th>Nombre del Personal</th>
-                    <th>Nombre del servicio</th>
-                    <th>Tiempo</th>
+                    <th>Personal</th>
+                    <th>Servicio</th>
+                    <th>Hora</th>
                     <th>Fecha</th>
                     <th>Precio</th>
                     <th></th>
@@ -242,9 +239,7 @@
                     </td>
                 </tr>
                 @empty
-                <tr>
-                    <td colspan="6">No se encontraron citas.</td>
-                </tr>
+                <tr><td colspan="6">No se encontraron citas.</td></tr>
                 @endforelse
             </tbody>
         </table>
@@ -252,6 +247,7 @@
 </div>
 @endif
 
+<!-- Calendario Script -->
 <script>
     function generateCalendar(year, month) {
         const calendarElement = document.getElementById('calendar');
@@ -262,7 +258,7 @@
         const monthNames = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
         currentMonthElement.innerText = `${monthNames[month]} ${year}`;
         const firstDayOfWeek = firstDayOfMonth.getDay();
-        const daysOfWeek = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
+        const daysOfWeek = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
         daysOfWeek.forEach(day => {
             const dayElement = document.createElement('div');
             dayElement.className = 'text-center font-semibold';
@@ -274,7 +270,7 @@
         }
         for (let day = 1; day <= daysInMonth; day++) {
             const dayElement = document.createElement('div');
-            dayElement.className = 'text-center py-2 border cursor-pointer hover:bg-blue-200';
+            dayElement.className = 'calendar-day';
             dayElement.innerText = day;
             dayElement.onclick = () => selectDate(day, month, year);
             calendarElement.appendChild(dayElement);
