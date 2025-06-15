@@ -50,3 +50,103 @@
  
 }
 
+/* ============================
+   index.css (o tu CSS global)
+   ============================ */
+
+/* Header base */
+.header {
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Transparent initial (texto blanco) */
+.header.transparent {
+  background-color: transparent !important;
+  box-shadow: none;
+}
+
+/* On scroll: white + shadow (texto negro) */
+.header.solid {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Container flex reparto */
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Navigation */
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.text-white .nav-link,
+.text-white .nav-logo,
+.text-white .nav-user {
+  color: white;
+}
+.text-black .nav-link,
+.text-black .nav-logo,
+.text-black .nav-user {
+  color: black;
+}
+
+/* Logo margin reset */
+.nav-logo {
+  margin: 0;
+}
+
+/* Buttons */
+.nav-button {
+  background-color: #ff4081;
+  color: white;
+  border-radius: 25px;
+  font-weight: bold;
+  padding: 10px 25px;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+.nav-button:hover {
+  background-color: #ff80ab;
+}
+
+/* Mobile nav hidden by default */
+.mobile-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+/* ==== Prevención de desbordamiento horizontal global ==== */
+html, body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+}
+
+/* ==== Asegura que las imágenes no causen scroll ==== */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+/* ==== Contenedores que podrían exceder el ancho del viewport ==== */
+.container, .container-nav, .max-w-6xl {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box;
+}
